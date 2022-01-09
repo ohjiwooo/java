@@ -16,6 +16,7 @@ public class OrderApp {
       //  OrderService orderService = appConfig.orderService();
 
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfig.class);
+        //스프링 컨테이너 생성
         MemberService memberService = applicationContext.getBean("memberService", MemberService.class);
         OrderService orderService = applicationContext.getBean("orderService", OrderService.class);
 
